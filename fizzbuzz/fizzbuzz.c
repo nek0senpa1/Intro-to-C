@@ -10,6 +10,20 @@
 */
 int fizzbuzz(int n)
 {
+    int counter = 0;
+
+    for (int i =0; i < n; i++) {
+        counter = counter + 1;
+    }
+
+    int widget = counter / 3;
+
+    if ( widget = 0) {
+        printf("it's divisible by 3");
+    }
+
+
+
 
 }
 
