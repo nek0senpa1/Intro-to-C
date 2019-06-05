@@ -16,14 +16,27 @@ int fizzbuzz(int n)
         counter = counter + 1;
     }
 
-    int widget = counter / 3;
+    int widget = counter % 3;
+    int widget2 = counter % 5;
 
-    if ( widget = 0) {
-        printf("it's divisible by 3");
+    // printf("the widget is currently %d\n", widget);
+
+    if (widget == 0 && widget2 ==0) {
+        printf("FizzBuzz \n");
+    }
+
+    else if ( widget == 0) {
+        // printf("it's divisible by 3 \n");
+        printf("Fizz \n");
+    }
+    
+    else if ( widget2 == 0) {
+        // printf("it's divisible by 5 \n");
+        printf("Buzz \n");
     }
 
 
-
+    return 0;
 
 }
 
