@@ -12,7 +12,15 @@
 */
 char *string_dup(char *src)
 {
+    int lengthy = string_length(src);
 
+    char *duplicate = malloc(lengthy);
+
+    for (int i =0; i<lengthy; i++) {
+        duplicate[i] = src[i];
+    }
+
+    return duplicate;
 }
 
 /*
@@ -24,7 +32,7 @@ char *string_dup(char *src)
 */
 void mem_copy(void *dest, const void *src, int n)
 {
-
+    printf("what the fuck is this... what is const void?... what is a void character pointer... what is this shit?")
 }
 
 /*
@@ -51,6 +59,8 @@ int main(void)
 
     printf("Duplicated string: %s\n", dup);
 
+    //--------------------------------
+
     int numbers[] = {100, 55, 4, 98, 10, 18, 90, 95, 43, 11, 47, 67, 89, 42, 49, 79};
     int n = sizeof(numbers) / sizeof(numbers[0]);
     int *target = malloc(n * sizeof(int));
@@ -59,28 +69,28 @@ int main(void)
 
     printf("Copied array: ");
 
-    for (int i = 0; i < n; i++) {
-        printf("%d ", target[i]);
-    }
+    // for (int i = 0; i < n; i++) {
+    //     printf("%d ", target[i]);
+    // }
 
-    printf("\n");
+    // printf("\n");
 
-    char *url = string_dup("http://lambdaschool.com");
-    char *path = string_dup("/students/");
-    int url_length = string_length(url);
-    int path_length = string_length(path);
+    // char *url = string_dup("http://lambdaschool.com");
+    // char *path = string_dup("/students/");
+    // int url_length = string_length(url);
+    // int path_length = string_length(path);
     
-    int new_length = url_length - 1 + path_length;
-    char *new_url = resize_memory(url, url_length, new_length);
-    char *p = new_url + url_length;
+    // int new_length = url_length - 1 + path_length;
+    // char *new_url = resize_memory(url, url_length, new_length);
+    // char *p = new_url + url_length;
 
-    while (*path != '\0') {
-        *p = *path;
-        p++;
-        path++;
-    }
+    // while (*path != '\0') {
+    //     *p = *path;
+    //     p++;
+    //     path++;
+    // }
 
-    printf("Full path string: %s\n", new_url);
+    // printf("Full path string: %s\n", new_url);
 
     return 0;
 }
