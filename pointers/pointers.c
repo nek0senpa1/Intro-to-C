@@ -15,7 +15,11 @@
 */
 void string_copy(char *x, char *y)
 {
-
+    while (*y) {
+        *x = *y;
+        x ++;
+        y ++;
+    }
 }
 
 /*
@@ -28,7 +32,16 @@ void string_copy(char *x, char *y)
 */
 char *find_char(char *str, char c)
 {
+    while (*str) {
+        if (*str == c) {
+            return str;
+        } else {
+            str++;
+            printf("Going through: %s \n", str);
+        }
+    }
 
+    return 0; 
 }
 
 /*
@@ -41,17 +54,17 @@ char *find_char(char *str, char c)
 */
 char *find_string(char *haystack, char *needle)
 {
-
+    
 }
 
 #ifndef TESTING
 int main(void)
 {
-    char *found_char = find_char("hello", 'e');
-    char *found_string = find_string("world", "or");
+    char *found_char = find_char("hello", 'l');
+    // char *found_string = find_string("world", "or");
 
     printf("Found char: %s\n", found_char);
-    printf("Found string: %s\n", found_string);
+    // printf("Found string: %s\n", found_string);
 
     return 0;
 }

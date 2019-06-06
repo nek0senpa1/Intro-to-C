@@ -9,7 +9,19 @@
 */
 int string_length(char *s)
 {
+    int counter = 0;
 
+    int thing = *s;
+
+    // for (int i = 0; thing < l; i++) {
+    //     if(s[thing] == '\0') {
+    //         break;
+    //     }
+    //     counter ++;
+    // }
+    // return counter;
+
+    printf(s);
 }
 
 /*
@@ -18,8 +30,27 @@ int string_length(char *s)
     enough space for the reversed string. Don't forget to terminate 
     the reversed string with a null character. Return the rv array.
 */
+
+
 char *reverse_string(char *rv, char *s)
 {
+    int counter = 0;
+
+    int length = string_length(s);
+
+    char reverso[length];
+
+    for (int i = (string_length(s)-1); i >=0; i --) {
+        rv[counter] = s[i];
+        reverso[counter] = s[i];
+        // printf("It's currently %s \n",rv);
+        counter++;
+        // break;
+    }
+
+    // reverso[counter];
+
+    return rv;
 
 }
 
