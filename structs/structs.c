@@ -39,11 +39,11 @@ Person *createPerson(char *name, int age, int height, int weight)
     Person's name as well as the memory that holds the Person instance.
 */
 
-// void destroyPerson(Person *who)
-// {
-//     free(who->name);
-// 	free(who);
-// }
+void destroyPerson(Person *who)
+{
+    free(who->name);
+	free(who);
+}
 
 #ifndef TESTING
 int main(void)
